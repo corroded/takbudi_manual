@@ -9,6 +9,9 @@ gem 'haml'
 gem 'devise'
 gem 'decent_exposure'
 gem 'compass-rails'
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'pundit'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
