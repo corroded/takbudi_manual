@@ -33,13 +33,13 @@
       .col-sm-5
         = f.text_field :email, class: 'form-control'
     .form-group
-      = f.label :address1, class: 'col-sm-2 control-label'
+      = f.label :address1, 'Address 1', class: 'col-sm-2 control-label'
       .col-sm-5
         = f.text_field :address1, class: 'form-control'
     .form-group
-      = f.label :address2, class: 'col-sm-2 control-label'
+      = f.label :address2, 'Address 2', class: 'col-sm-2 control-label'
       .col-sm-5
         = f.text_field :address2, class: 'form-control'
   .form-group
     .col-sm-offset-2.col-sm-10
-      %button.btn.btn-default{type: 'submit'} Submit
+      %button.btn.btn-default{type: 'submit'} Create Profile
