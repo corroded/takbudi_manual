@@ -16,6 +16,10 @@
       .col-sm-5
         = f.text_field :last_name, class: 'form-control'
     .form-group
+      = f.label :date_of_birth, class: 'col-sm-2 control-label'
+      .col-sm-5
+        = f.text_field :date_of_birth, class: 'form-control'
+    .form-group
       = f.label :password, class: 'col-sm-2 control-label'
       .col-sm-5
         = f.password_field :password, class: 'form-control'
@@ -28,11 +32,30 @@
         %label.pull-right.control-label Gender
       .col-sm-10
         %label.radio-inline
-          = radio_button_tag 'gender', 'Male'
+          = f.radio_button :gender, 'male'
           Male
         %label.radio-inline
-          = radio_button_tag 'gender', 'female'
+          = f.radio_button :gender, 'female'
           Female
+    .form-group
+      .col-sm-2
+        %label.pull-right.control-label Shirt / Singlet Size
+      .col-sm-10
+        %label.radio-inline
+          = f.radio_button :shirt_size, 'xs'
+          XS
+        %label.radio-inline
+          = f.radio_button :shirt_size, 's'
+          S
+        %label.radio-inline
+          = f.radio_button :shirt_size, 'm'
+          M
+        %label.radio-inline
+          = f.radio_button :shirt_size, 'l'
+          L
+        %label.radio-inline
+          = f.radio_button :shirt_size, 'xl'
+          XL
 
   %fieldset
     %legend Contact Info:
@@ -48,6 +71,10 @@
       = f.label :address2, 'Address 2', class: 'col-sm-2 control-label'
       .col-sm-5
         = f.text_field :address2, class: 'form-control'
+    .form-group
+      = f.label :contact_number, class: 'col-sm-2 control-label'
+      .col-sm-5
+        = f.text_field :contact_number, class: 'form-control'
   .form-group
     .col-sm-offset-2.col-sm-10
       %button.btn.btn-default{type: 'submit'} Create Profile
