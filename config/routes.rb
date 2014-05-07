@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :users, except: [:new] do
-    collection do
-      get 'register' => 'users#new'
-    end
+  devise_for :users, controllers: {registrations: 'registrations'}
+
+  scope :users do
+    get '/register', to: 'users#new'
+    get '/dashboard', to: 'users#dashboard', as: :users_dashboard
   end
 
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

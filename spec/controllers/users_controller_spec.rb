@@ -8,11 +8,13 @@ describe UsersController do
           user: {
             first_name: 'Lumpy',
             last_name: 'Space Princess',
-            gender: 'F'
+            gender: 'F',
+            email: 'not@whatever.com',
+            password: 'password',
+            password_confirmation: 'password'
           }
         }
 
-        #TODO: check why this is needed
         request.accept = 'application/json'
 
         response = put :create, user_params
