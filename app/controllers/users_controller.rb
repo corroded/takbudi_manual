@@ -10,6 +10,9 @@ class UsersController < ApplicationController
     respond_with(user)
   end
 
+  def dashboard
+  end
+
   private
 
   def user_params
