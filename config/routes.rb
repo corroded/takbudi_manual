@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
 
   scope :users do
-    get '/register', to: 'users#new'
     get '/dashboard', to: 'users#dashboard', as: :users_dashboard
   end
 

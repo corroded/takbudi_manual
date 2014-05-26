@@ -1,6 +1,6 @@
 describe 'user signup process', type: :feature do
   it 'should create a new user' do
-    visit '/users/register'
+    visit '/users/sign_up'
     fill_in 'First name', with: 'Finn'
     fill_in 'Middle name', with: 'the'
     fill_in 'Last name', with: 'Human'
