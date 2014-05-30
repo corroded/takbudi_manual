@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe 'user signup process', type: :feature do
   it 'should create a new user' do
     visit '/users/sign_up'
