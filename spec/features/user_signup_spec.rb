@@ -17,4 +17,14 @@ describe 'user signup process', type: :feature do
     expect(current_path).to eq(users_dashboard_path)
     expect(page).to have_content('You have signed up successfully')
   end
+
+  context 'when an existing user logs back in' do
+    it 'should show the dashboard and welcome the user back' do
+      yosemite = create :user, first_name: 'Yosemite', last_name: 'Bear'
+      sign_in_as_user yosemite
+
+      expect(current_path).to eq(users_dashboard_path)
+      expect(page).to have_content('Welcome, Yosemite')
+    end
+  end
 end
