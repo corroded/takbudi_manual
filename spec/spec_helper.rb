@@ -43,4 +43,8 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
   config.include AuthenticationHelper, type: :feature
+
+  config.color_enabled = true
+  config.tty = true
+  config.formatter = :documentation
 end
