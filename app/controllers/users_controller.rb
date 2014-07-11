@@ -13,6 +13,16 @@ class UsersController < ApplicationController
   def dashboard
   end
 
+  def update
+    if user.save
+      flash[:notice] = 'User was updated successfully'
+      redirect_to users_dashboard_path(user)
+    else
+      flash[:error] = 'There was a problem saving the user'
+      render :show
+    end
+  end
+
   private
 
   def user_params
